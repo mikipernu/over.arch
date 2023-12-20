@@ -4,7 +4,7 @@
 
 Built with React, FastAPI, SQLAlchemy, and PostgreSQL.
 
-To run this project, you'll need to configure AWS Cognito to get access to a user pool and related environment variables. A set of `example.env` files show what kind of variables exist.
+To run this project, you'll need to configure AWS Cognito to get access to a user pool and related environment variables. A set of `example.env` files show what kind of variables exist. Alternatively, you could change the protectedRoutes in `main.tsx` and remove the `_: dict = Depends(get_current_user)` from the API routes inside `router.py`.
 
 When .env have been created, you can run: ```docker compose up```
 
