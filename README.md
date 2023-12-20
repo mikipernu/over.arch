@@ -6,22 +6,9 @@ Built with React, FastAPI, SQLAlchemy, and PostgreSQL.
 
 To run this project, you'll need to configure AWS Cognito to get access to a user pool and related environment variables. A set of `example.env` files show what kind of variables exist. Alternatively, you could change the protectedRoutes in `main.tsx` and remove the `_: dict = Depends(get_current_user)` from the API routes inside `router.py`.
 
-When .env have been created, you can run: ```docker compose up```
+When the .env files have been created, aad the Docker images of the client and microservices have been created, you can run: ```docker compose up```.
 
-Stop and remove containers with: ```docker-compose down```
-
-## Client
-<img width="1680" alt="Screenshot 2023-12-20 at 9 28 44" src="https://github.com/mikipernu/over.arch/assets/6062294/50e517c9-40c9-4f46-9bcb-080b638d0c5f">
-
-You can run the client locally by first installing the dependencies:
-
-```yarn install```
-
-and then running
-
-```yarn dev```
-
-TODO: Handling visitations to said locations and logging access.
+Stop and remove containers with: ```docker-compose down```.
 
 ## Locations API
 <img width="1679" alt="Screenshot 2023-12-20 at 9 48 29" src="https://github.com/mikipernu/over.arch/assets/6062294/43eaf981-c9fe-4060-806c-b7df146f3a27">
@@ -34,7 +21,9 @@ Start with setting up a virtual environment: ```virtualenv venv```, and activate
 
 and then running
 
-```yarn dev```
+```uvicorn main:app --reload```
+
+You can find the API locally at `http://localhost:8000/docs`.
 
 TODO: Handling visitations to said locations and logging access.
 

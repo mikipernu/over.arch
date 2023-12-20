@@ -1,33 +1,18 @@
-#
+# VMS Web Client for listing and managing guest and locations
 
+## Client
+<img width="1680" alt="Screenshot 2023-12-20 at 9 28 44" src="https://github.com/mikipernu/over.arch/assets/6062294/50e517c9-40c9-4f46-9bcb-080b638d0c5f">
 
+You can run the client locally by first installing the dependencies:
+
+```yarn install```
+
+and then running
+
+```yarn dev```
+
+TODO: Handling visitations to said locations and logging access.
 
 # React + TypeScript + Vite
 
-This project uses the [Fresh App Factory template](https://fresh-app.github.io/fresh-vite-app-react-ts.html) as the basis for the client application:
-
-The template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+This project uses the [Fresh App Factory template](https://fresh-app.github.io/fresh-vite-app-react-ts.html) as the basis for the client application.

@@ -24,7 +24,6 @@ lerna-debug.log*
 *.njsproj
 *.sln
 *.sw?
-!init.sql
 
 # Terraform
 .terraform/
