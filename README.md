@@ -2,9 +2,11 @@
 ![over arch-logo](https://github.com/mikipernu/over.arch/assets/6062294/f0c66504-8459-4ab4-83d9-541a6558c198)
 
 
-Built with React, FastAPI, SQLAlchemy, and
+Built with React, FastAPI, SQLAlchemy, and PostgreSQL.
 
-To run this project, run: ```docker compose up```
+To run this project, you'll need to configure AWS Cognito to get access to a user pool and related environment variables. A set of `example.env` files show what kind of variables exist.
+
+When .env have been created, you can run: ```docker compose up```
 
 Stop and remove containers with: ```docker-compose down```
 
