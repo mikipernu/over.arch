@@ -108,7 +108,6 @@ const Account = (props: { children: React.ReactNode }) => {
 
       user.authenticateUser(authDetails, {
         onSuccess: (data) => {
-          console.log("onSuccess ", data);
           resolve(data);
         },
         onFailure: (error) => {
@@ -117,7 +116,7 @@ const Account = (props: { children: React.ReactNode }) => {
           navigate("/login", { replace: true });
         },
         newPasswordRequired: (data) => {
-          console.log("newPasswordRequired ", data);
+          console.log("newPasswordRequired!");
           resolve(data);
         }
       });

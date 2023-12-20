@@ -1,6 +1,12 @@
+#
+
+
+
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project uses the [Fresh App Factory template](https://fresh-app.github.io/fresh-vite-app-react-ts.html) as the basis for the client application:
+
+The template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
 

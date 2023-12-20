@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS locations (
+  location_id SERIAL PRIMARY KEY,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  modified_at TIMESTAMP NOT NULL,
+  name VARCHAR(255) NOT NULL,
+  zipcode VARCHAR(20),
+  address VARCHAR(255)
+);

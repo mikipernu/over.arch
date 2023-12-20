@@ -24,6 +24,7 @@ lerna-debug.log*
 *.njsproj
 *.sln
 *.sw?
+!init.sql
 
 # Terraform
 .terraform/
@@ -41,7 +42,9 @@ main.zip
 # Python
 __pycache__
 .pytest_cache
+.mypy_cache
 *.pyc
 
 # Testing
 test_database.db
+.tox

@@ -1,11 +1,20 @@
-CREATE TABLE IF NOT EXISTS locations (
-  location_id SERIAL PRIMARY KEY,
+CREATE TABLE IF NOT EXISTS guests (
+  guest_id SERIAL PRIMARY KEY,
+  email VARCHAR(255) NOT NULL,
+  name VARCHAR(255),
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  modified_at TIMESTAMP,
-  name VARCHAR(255) NOT NULL,
-  zipcode VARCHAR(20),
-  address VARCHAR(255)
+  modified_at TIMESTAMP NOT NULL,
+  -- person_id INT NOT NULL
 );
+
+-- CREATE TABLE IF NOT EXISTS locations (
+--   location_id SERIAL PRIMARY KEY,
+--   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+--   modified_at TIMESTAMP NOT NULL,
+--   name VARCHAR(255) NOT NULL,
+--   zipcode VARCHAR(20),
+--   address VARCHAR(255)
+-- );
 
 -- CREATE TABLE IF NOT EXISTS users (
 --   user_id VARCHAR(255) PRIMARY KEY,
@@ -33,16 +42,6 @@ CREATE TABLE IF NOT EXISTS locations (
 --   FOREIGN KEY (person_id) REFERENCES people(person_id),
 --   workplace_id INT NOT NULL,
 --   FOREIGN KEY (workplace_id) REFERENCES locations(location_id)
--- );
-
--- CREATE TABLE IF NOT EXISTS guests (
---   guest_id SERIAL PRIMARY KEY,
---   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
---   modified_at TIMESTAMP,
---   person_id INT NOT NULL,
---   FOREIGN KEY (person_id) REFERENCES people(person_id),
---   visitation_location_id INT NOT NULL,
---   FOREIGN KEY (visitation_location_id) REFERENCES locations(location_id)
 -- );
 
 -- CREATE TABLE IF NOT EXISTS visitations (

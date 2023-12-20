@@ -31,14 +31,12 @@ const LocationsPage = () => {
       if (cognitoUser != null) {
         cognitoUser.getSession((err: Error | null, session: null | CognitoUserSession) => {
           if (err) {
-            console.error(err);
             setError('Error getting Cognito session');
           } else if (session && session.isValid()) {
             setToken(session.getIdToken().getJwtToken());
           }
         });
       } else {
-        console.error("No current user");
         setError('No current user');
       }
     };
