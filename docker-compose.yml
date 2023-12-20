@@ -1,0 +1,40 @@
+version: "3.4"
+
+services:
+  locations-db:
+    image: postgres
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - pgdata1:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    networks:
+      - internal-network
+  locations:
+    image: over.arch_locations
+    restart: always
+    depends_on:
+      - locations-db
+    env_file:
+      - ./microservices/locations/.env
+    ports:
+      - 8000:80
+    networks:
+      - internal-network
+  client:
+    image: over.arch_client
+    restart: always
+    depends_on:
+      - locations-db
+      - locations
+    ports:
+      - 3000:80
+
+volumes:
+  pgdata1:
+
+networks:
+  internal-network:
