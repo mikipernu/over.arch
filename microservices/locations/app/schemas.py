@@ -19,7 +19,7 @@ class LocationCreate(LocationBase):
 class Location(LocationBase):
     location_id: int
     created_at: datetime
-    modified_at: Optional[datetime] = None
+    modified_at: datetime
 
 
 class PaginatedResponse(BaseModel, Generic[T]):

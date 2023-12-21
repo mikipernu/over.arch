@@ -19,11 +19,13 @@ Start with setting up a virtual environment: ```virtualenv venv```, and activate
 
 ```pip install -r requirements/dev.txt```
 
-and then running
+You'll have to have a PostgreSQL or SQLite database running with the `SQLALCHEMY_DATABASE_URI` set to point to that database. Check `tests/test_crud.py` how it uses SQLITE for more context.
 
-```uvicorn main:app --reload```
+Then, when the database is ready to accept connections, you can run inside the locations folder:
 
-You can find the API locally at `http://localhost:8000/docs`.
+```uvicorn app.main:app --reload```.
+
+You can then find the API locally at `http://localhost:8000/docs`.
 
 TODO: Handling visitations to said locations and logging access.
 

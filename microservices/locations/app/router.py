@@ -12,7 +12,8 @@ from .crud import (
 from .auth import get_current_user
 from .db_engine import get_db
 
-router = APIRouter()
+# router = APIRouter(prefix="/locations-api")
+router = APIRouter(prefix="")
 
 
 @router.post("/locations/", response_model=Location)

@@ -5,13 +5,15 @@ from .db_engine import engine
 from .models import Base
 from .router import router
 
+# app = FastAPI(root_path="/locations-api/")
 app = FastAPI()
+
 
 origins = [
     "http://localhost",
     "http://localhost:8080",
     "http://localhost:3000",
-    "http://localhost:5173",
+    "https://mikipernu.com",
 ]
 
 app.add_middleware(
