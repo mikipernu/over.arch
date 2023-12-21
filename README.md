@@ -15,9 +15,9 @@ Stop and remove containers with: ```docker-compose down```.
 
 This project uses FastAPI for setting up a CRUD API for handling locations.
 
-Start with setting up a virtual environment: ```virtualenv venv```, and activate it with ```venv/bin/activate```
+Start with setting up a virtual environment: ```virtualenv venv```, and activate it with ```venv/bin/activate```.
 
-```pip install -r requirements/dev.txt```
+Run ```pip install -r requirements/dev.txt``` to install development dependencies.
 
 You'll have to have a PostgreSQL or SQLite database running with the `SQLALCHEMY_DATABASE_URI` set to point to that database. Check `tests/test_crud.py` how it uses SQLITE for more context.
 
